@@ -1,0 +1,10 @@
+.sidebar-container {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  padding-top: 1.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-right: 1px solid gray;
+  height: 100vh;
+}

@@ -1,0 +1,20 @@
+.container {
+  border: 1px solid gray;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 0.75rem;
+  width: 17.5rem;
+  height: 2.5rem;
+  margin-top: 1.4rem;
+  overflow: hidden;
+}
+.container .search-icon:hover {
+  cursor: pointer;
+}
+.container input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+}
