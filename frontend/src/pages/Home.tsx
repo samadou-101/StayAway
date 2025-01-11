@@ -1,11 +1,27 @@
-import React from "react";
+import { useEffect } from "react";
+import Feed from "../components/feed/Feed";
 import Sidebar from "../components/sidebar/Sidebar";
 
 function Home() {
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 10);
+    console.log("test");
+  }, []);
   return (
-    <div className="home-container" style={{ display: "flex" }}>
+    <>
       <Sidebar />
-    </div>
+      <div
+        className="home-container"
+        style={{
+          display: "flex",
+          paddingLeft: "19.5rem ",
+        }}
+      >
+        <Feed />
+      </div>
+    </>
   );
 }
 
