@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Feed from "../components/feed/Feed";
 import Sidebar from "../components/sidebar/Sidebar";
+import Dashboard from "../components/dashboard/Dashboard";
 
 function Home() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function Home() {
         }}
       >
         <Feed />
+        <Dashboard />
       </div>
     </>
   );

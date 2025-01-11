@@ -1,0 +1,27 @@
+.like-container {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.06rem;
+}
+.comments-container {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.09rem;
+}
+.share-container {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.06rem;
+}
+.like-container span,
+.comments-container span,
+.share-container span {
+  font-size: 14px;
+  margin-left: 0.2rem;
+}
