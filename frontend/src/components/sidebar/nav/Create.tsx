@@ -1,6 +1,6 @@
-import React from "react";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-function Feed() {
+import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
+
+function Create() {
   return (
     <div
       className="container"
@@ -14,7 +14,7 @@ function Feed() {
         cursor: "pointer",
       }}
     >
-      <HomeOutlinedIcon
+      <AddBoxOutlinedIcon
         color="action"
         sx={{
           width: "30px",
@@ -29,10 +29,10 @@ function Feed() {
         className="nav-item"
         style={{ paddingTop: "", cursor: "pointer", fontWeight: "450" }}
       >
-        Feed
+        Create
       </span>
     </div>
   );
 }
 
-export default Feed;
+export default Create;

@@ -1,8 +1,12 @@
 .logo-container {
   display: flex;
-  justify-content: center;
+  width: 100%;
+  height: 4.5rem;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
+  border-bottom: 1px solid gray;
+  /* padding-left: 1rem; */
+  justify-content: center;
 }
 .logo-border {
   /* height: 50px; */

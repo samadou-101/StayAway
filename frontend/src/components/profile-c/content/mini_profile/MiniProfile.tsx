@@ -1,0 +1,71 @@
+import style from "../../styles/profile.module.css";
+import style1 from "./styles/miniprofil.module.css";
+import pic from "../../../../assets/tiger.jpeg";
+import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
+import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
+import GroupAddOutlinedIcon from "@mui/icons-material/GroupAddOutlined";
+import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
+function MiniProfile() {
+  return (
+    <div className={style["mini-profile-container"]}>
+      <div className={style1["mini-profile"]}>
+        <div className={style1["main-info"]}>
+          <div className={style1["pic-and-name"]}>
+            <div className={style1["profile-pic"]}>
+              <img src={pic} alt="" />
+            </div>
+            <div className={style1["user-intro"]}>
+              <div className={style1["p-name"]}>
+                <span>Tiger</span>
+              </div>
+              <div className={style1["mini-bio"]}>
+                <span>mini bio about the tiger</span>
+              </div>
+            </div>
+          </div>
+          <div className={style1["main-stats"]}>
+            <div className={style1["fol-pos"]}>
+              <div className={style1["followers"]}>
+                <span className={style1["fol-num"]}>10k</span>
+                <span>Followers</span>
+              </div>
+              <div className={style1["posts"]}>
+                <span className={style1["pos-num"]}>50</span>
+                <span>Posts</span>
+              </div>
+            </div>
+
+            <div className={style1["actions"]}>
+              <div className={style1["follow-user"]}>
+                <GroupAddOutlinedIcon
+                  sx={{
+                    transition: "all 0.2s ease-in-out",
+                    "&:hover": { color: "green" },
+                  }}
+                />
+              </div>
+              <div className={style1["dm"]}>
+                <SendOutlinedIcon
+                  sx={{
+                    transition: "all 0.2s ease-in-out",
+                    "&:hover": { color: "blue" },
+                  }}
+                />
+              </div>
+              <div className={style1["more"]}>
+                <MoreVertOutlinedIcon
+                  sx={{
+                    transition: "all 0.2s ease-in-out",
+                    "&:hover": { color: "red" },
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default MiniProfile;

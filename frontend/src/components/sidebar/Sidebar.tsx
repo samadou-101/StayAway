@@ -8,8 +8,10 @@ function Sidebar() {
   return (
     <div className={style["sidebar-container"]}>
       <Logo />
-      <Search />
-      <Nav />
+      <div className={style["side-content"]}>
+        <Search />
+        <Nav />
+      </div>
       <ProfileLogout />
     </div>
   );

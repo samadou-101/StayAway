@@ -51,6 +51,7 @@
   align-items: center;
   justify-content: center;
   border: 3px solid white;
+  cursor: pointer;
 }
 .story-container img {
   width: 100%;

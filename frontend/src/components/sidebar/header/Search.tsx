@@ -3,14 +3,15 @@ import SearchIcon from "@mui/icons-material/Search";
 function Search() {
   return (
     <div className={style["container"]}>
+      <input type="text" placeholder="Search..." />
       <SearchIcon
         color="action"
         sx={{
+          marginLeft: "auto",
           cursor: "pointer",
           "&:hover": { color: "black" },
         }}
       />
-      <input type="text" placeholder="Search..." />
     </div>
   );
 }

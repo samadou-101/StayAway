@@ -1,11 +1,17 @@
-import { colors } from "@mui/material";
 import style from "../styles/header.module.css";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 function NewPost() {
   return (
     <div className={style["newpost-container"]}>
-      <div style={{ color: "white", fontWeight: "550" }}>Add New Post</div>
-      <AddOutlinedIcon sx={{ color: "white" }} />
+      <span className={style["add-post"]}>Add New Post</span>
+      <AddOutlinedIcon
+        sx={{
+          color: "white",
+          transition: "0.2s ease-in-out",
+          "&:hover": { color: "black" },
+          cursor: "pointer",
+        }}
+      />
     </div>
   );
 }

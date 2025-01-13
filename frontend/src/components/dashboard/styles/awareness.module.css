@@ -1,0 +1,62 @@
+.aware-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.awr-header {
+  display: flex;
+  margin: 1rem 1rem;
+  padding-bottom: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid gray;
+}
+.awr-header .spn1 {
+  font-weight: 600;
+  font-size: 18px;
+}
+.awr-details {
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  gap: 0.6rem;
+}
+.awr-details .spn2 {
+  font-size: 14px;
+}
+
+/* AWARENESS STATS  */
+
+.awrstat-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.posts-seen-container,
+.time-spent-container,
+.videos-watched-container {
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  border-radius: 5px;
+  padding: 1.5rem;
+  width: 17.5rem;
+}
+.posts-seen-title,
+.time-spent-title,
+.videos-watched-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.posts-seen-title span,
+.time-spent-title span,
+.videos-watched-title span {
+  font-size: 15px;
+  font-weight: 500;
+}

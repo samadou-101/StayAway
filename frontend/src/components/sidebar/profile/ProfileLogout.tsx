@@ -12,6 +12,7 @@ function ProfileLogout() {
         width: "17.5rem",
         height: "4.3rem",
         paddingRight: "1rem",
+        paddingLeft: "1.75rem",
         marginTop: "auto",
       }}
     >

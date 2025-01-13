@@ -5,9 +5,10 @@
   align-items: center;
   gap: 0.5rem;
   padding-left: 0.75rem;
+  padding-right: 0.75rem;
   width: 17.5rem;
   height: 2.5rem;
-  margin-top: 1.4rem;
+  /* margin-top: 1.4rem; */
   overflow: hidden;
 }
 .container .search-icon:hover {
@@ -16,5 +17,6 @@
 .container input {
   border: none;
   outline: none;
-  flex-grow: 1;
+  background-color: transparent;
+  /* flex-grow: 1; */
 }

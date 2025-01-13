@@ -7,12 +7,6 @@ function Feed() {
   return (
     <div className={style["feed-container"]}>
       <FeedHeader />
-      {/* <hr
-        style={{
-          marginTop: "23px",
-          borderTop: "0.1px solid  #94A3B8",
-        }}
-      /> */}
       <div className={style["content-container"]}>
         <StoriesSection />
         <Post />

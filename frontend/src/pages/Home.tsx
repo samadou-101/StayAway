@@ -4,25 +4,22 @@ import Sidebar from "../components/sidebar/Sidebar";
 import Dashboard from "../components/dashboard/Dashboard";
 
 function Home() {
-  useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 10);
-    console.log("test");
-  }, []);
+  <Dashboard />;
+  <Dashboard />;
   return (
     <>
       <Sidebar />
       <div
-        className="home-container"
+        className="home-page-container"
         style={{
           display: "flex",
           paddingLeft: "19.5rem ",
+          paddingRight: "19.5rem",
         }}
       >
         <Feed />
-        <Dashboard />
       </div>
+      <Dashboard />
     </>
   );
 }

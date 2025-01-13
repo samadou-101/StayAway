@@ -1,0 +1,106 @@
+/* Remove this container when use*/
+/* .component-title {
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  top: 30px;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #888;
+  text-align: center;
+} */
+label {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+}
+.tab-container {
+  /* position: relative; */
+  left: 41.5%;
+  top: 5.5rem;
+  position: fixed;
+  /* width: 100%; */
+  z-index: 999;
+  width: 40%;
+  height: fit-content;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 2px;
+  background-color: #dadadb;
+  border-radius: 9px;
+}
+
+.indicator {
+  content: "";
+  width: 8.1rem;
+  height: 28px;
+  /* background: #ffffff; */
+  background-color: transparent;
+  position: absolute;
+  top: 0.125rem;
+  left: 16%;
+  /* z-index: 9; */
+  /* border: 1px solid rgba(0, 0, 0, 0.04); */
+  /* border: 1px solid gray; */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 7px;
+  transition: all 0.3s ease-out;
+}
+
+.tab {
+  width: 130px;
+  height: 28px;
+  position: absolute;
+  z-index: 99;
+  outline: none;
+  opacity: 0;
+}
+
+.tab_label {
+  width: 130px;
+  height: 28px;
+  position: relative;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.tab--1:checked ~ .indicator {
+  left: 16%;
+}
+
+.tab--2:checked ~ .indicator {
+  left: 33%;
+}
+
+.tab--3:checked ~ .indicator {
+  left: 50%;
+}
+.tab--4:checked ~ .indicator {
+  left: 67%;
+}
+
+/* */
+
+.selected-tab-container {
+  /* background: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  width: 100%;
+  height: fit-content;
+}
