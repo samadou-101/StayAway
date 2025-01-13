@@ -5,6 +5,8 @@ import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import GroupAddOutlinedIcon from "@mui/icons-material/GroupAddOutlined";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
+import { HiOutlineUsers } from "react-icons/hi2";
+import { PiNotePencilLight } from "react-icons/pi";
 function MiniProfile() {
   return (
     <div className={style["mini-profile-container"]}>
@@ -19,7 +21,7 @@ function MiniProfile() {
                 <span>Tiger</span>
               </div>
               <div className={style1["mini-bio"]}>
-                <span>mini bio about the tiger</span>
+                <span>A mini bio for the tiger shouldn't be long</span>
               </div>
             </div>
           </div>
@@ -27,40 +29,49 @@ function MiniProfile() {
             <div className={style1["fol-pos"]}>
               <div className={style1["followers"]}>
                 <span className={style1["fol-num"]}>10k</span>
-                <span>Followers</span>
+                <HiOutlineUsers />
+                {/* <span>Followers</span> */}
               </div>
+              <div
+                style={{
+                  height: "100%",
+                  width: "1px",
+                  background: "black",
+                  content: " ",
+                }}
+              ></div>
               <div className={style1["posts"]}>
                 <span className={style1["pos-num"]}>50</span>
-                <span>Posts</span>
+                <PiNotePencilLight />
+                {/* <span>Posts</span> */}
               </div>
             </div>
-
-            <div className={style1["actions"]}>
-              <div className={style1["follow-user"]}>
-                <GroupAddOutlinedIcon
-                  sx={{
-                    transition: "all 0.2s ease-in-out",
-                    "&:hover": { color: "green" },
-                  }}
-                />
-              </div>
-              <div className={style1["dm"]}>
-                <SendOutlinedIcon
-                  sx={{
-                    transition: "all 0.2s ease-in-out",
-                    "&:hover": { color: "blue" },
-                  }}
-                />
-              </div>
-              <div className={style1["more"]}>
-                <MoreVertOutlinedIcon
-                  sx={{
-                    transition: "all 0.2s ease-in-out",
-                    "&:hover": { color: "red" },
-                  }}
-                />
-              </div>
-            </div>
+          </div>
+        </div>
+        <div className={style1["actions"]}>
+          <div className={style1["follow-user"]}>
+            <GroupAddOutlinedIcon
+              sx={{
+                transition: "all 0.2s ease-in-out",
+                "&:hover": { color: "green" },
+              }}
+            />
+          </div>
+          <div className={style1["dm"]}>
+            <SendOutlinedIcon
+              sx={{
+                transition: "all 0.2s ease-in-out",
+                "&:hover": { color: "blue" },
+              }}
+            />
+          </div>
+          <div className={style1["more"]}>
+            <MoreVertOutlinedIcon
+              sx={{
+                transition: "all 0.2s ease-in-out",
+                "&:hover": { color: "red" },
+              }}
+            />
           </div>
         </div>
       </div>

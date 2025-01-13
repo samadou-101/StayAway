@@ -8,14 +8,18 @@ import Search from "../../sidebar/header/Search";
 function ProfileHeader() {
   return (
     <div className={style["profile-header"]}>
-      <div className={style["pheader-logo"]}>
-        <img src={Logo} alt="" />
+      <div className={style["logo-search"]}>
+        <div className={style["pheader-logo"]}>
+          <img src={Logo} alt="" />
+        </div>
+        <Search />
       </div>
-      <Search />
       <div className={style["pheader-items"]}>
         <HomeOutlinedIcon
           color="action"
           sx={{
+            width: "1.7rem",
+            height: "1.7rem",
             cursor: "pointer",
             "&:hover": {
               color: "black",
@@ -25,15 +29,8 @@ function ProfileHeader() {
         <GroupOutlinedIcon
           color="action"
           sx={{
-            cursor: "pointer",
-            "&:hover": {
-              color: "black",
-            },
-          }}
-        />
-        <NotificationsOutlinedIcon
-          color="action"
-          sx={{
+            width: "1.7rem",
+            height: "1.7rem",
             cursor: "pointer",
             "&:hover": {
               color: "black",
@@ -43,13 +40,37 @@ function ProfileHeader() {
         <ChatBubbleOutlineTwoToneIcon
           color="action"
           sx={{
-            width: "20px",
+            width: "25px",
+            height: "25px",
             cursor: "pointer",
             "&:hover": {
               color: "black",
             },
           }}
         />
+        <NotificationsOutlinedIcon
+          color="action"
+          sx={{
+            width: "1.7rem",
+            height: "1.7rem",
+            cursor: "pointer",
+            "&:hover": {
+              color: "black",
+            },
+          }}
+        />
+      </div>
+      <div className={style["profile-pic"]}>
+        <div
+          style={{
+            width: "3rem",
+            height: "3rem",
+            borderRadius: "50%",
+            overflow: "hidden",
+          }}
+        >
+          <img src={Logo} alt="" style={{ width: "100%", height: "100%" }} />
+        </div>
       </div>
     </div>
   );
