@@ -13,48 +13,62 @@
   text-align: center;
 } */
 label {
-  color: black;
-  font-weight: 600;
-  text-decoration: none;
 }
 .tab-container {
   /* position: relative; */
   left: 41.5%;
   top: 5.5rem;
   position: fixed;
-  /* width: 100%; */
   z-index: 999;
   width: 40%;
-  height: fit-content;
+  /* height: fit-content; */
   justify-content: center;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 2px;
+  /* padding: 2px; */
+  border: 1px solid #dee2e6;
+  border-bottom: none;
   background-color: #dadadb;
   border-radius: 9px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
-
 .indicator {
   content: "";
   width: 8.1rem;
-  height: 28px;
-  /* background: #ffffff; */
+  height: 100%;
+  background: transparent; /* Fully transparent background */
+  position: absolute;
+  left: 16%;
+  /* z-index: -1; */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 3px rgba(255, 255, 255, 0.2); /* Subtle shadow for depth */
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Transparent border to indicate the active tab */
+  border-radius: 10px; /* Rounded corners for a softer look */
+  transition: all 0.3s ease-in-out; /* Smooth animation when switching tabs */
+  cursor: pointer;
+}
+
+/* .indicator {
+  content: "";
+  width: 8.1rem;
+  height: 100%;
   background-color: transparent;
   position: absolute;
-  top: 0.125rem;
   left: 16%;
-  /* z-index: 9; */
-  /* border: 1px solid rgba(0, 0, 0, 0.04); */
-  /* border: 1px solid gray; */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04);
+  z-index: 999;
+  z-index: -1;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04);
   border-radius: 7px;
   transition: all 0.3s ease-out;
-}
+} */
 
 .tab {
   width: 130px;
-  height: 28px;
+  /* height: 28px; */
+  height: fit-content;
   position: absolute;
   z-index: 99;
   outline: none;
@@ -64,15 +78,19 @@ label {
 .tab_label {
   width: 130px;
   height: 28px;
+  /* height: fit-content; */
   position: relative;
-  z-index: 999;
+  /* z-index: 999; */
   display: flex;
   align-items: center;
   justify-content: center;
   border: 0;
-  font-size: 0.8rem;
   opacity: 0.8;
   cursor: pointer;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 
 .tab--1:checked ~ .indicator {
@@ -102,5 +120,7 @@ label {
   padding: 1rem;
   padding-bottom: 2rem;
   width: 100%;
-  height: fit-content;
+  /* background-color: #dee2e6; */
+  background-color: #f1f5f9;
+  /* height: fit-content; */
 }
