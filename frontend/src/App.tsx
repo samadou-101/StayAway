@@ -2,7 +2,9 @@ import { BrowserRouter, Routes } from "react-router";
 import Home from "./pages/Home";
 import { Route } from "react-router";
 import Profile from "./pages/Profile";
+import Login from "./pages/Login";
 import { useEffect } from "react";
+import Signup from "./pages/Signup";
 
 const App = () => {
   useEffect(() => {
@@ -17,6 +19,8 @@ const App = () => {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </BrowserRouter>
     </>
