@@ -9,7 +9,7 @@ function Feed() {
     <div className={style["feed-container"]}>
       <FeedHeader />
       <div className={style["content-container"]}>
-        {/* <StoriesSection />
+        <StoriesSection />
         <Post />
         <Post />
         <Post />
@@ -18,8 +18,8 @@ function Feed() {
         <Post />
         <Post />
         <Post />
-        <Post /> */}
-        <Messages />
+        <Post />
+        {/* <Messages /> */}
       </div>
     </div>
   );

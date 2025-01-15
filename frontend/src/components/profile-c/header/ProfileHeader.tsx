@@ -3,7 +3,7 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import GroupOutlinedIcon from "@mui/icons-material/GroupOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import ChatBubbleOutlineTwoToneIcon from "@mui/icons-material/ChatBubbleOutlineTwoTone";
-import Logo from "../../../assets/logo.png";
+import Logo from "../../../assets/no-background-logo.png";
 import Search from "../../sidebar/header/Search";
 function ProfileHeader() {
   return (

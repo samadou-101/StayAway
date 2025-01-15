@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../../assets/logo.png";
+import image from "../../../assets/no-background-logo.png";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 function ProfileLogout() {
   return (

@@ -1,5 +1,5 @@
 import style from "../styles/header.module.css";
-import pic from "../../../assets/logo.png";
+import pic from "../../../assets/no-background-logo.png";
 import ChatBubbleOutlineTwoToneIcon from "@mui/icons-material/ChatBubbleOutlineTwoTone";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 function Header() {
