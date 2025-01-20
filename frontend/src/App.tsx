@@ -11,7 +11,7 @@ const App = () => {
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }, 10);
-    console.log("test");
+    // console.log("test");
   }, []);
   return (
     <BrowserRouter>
