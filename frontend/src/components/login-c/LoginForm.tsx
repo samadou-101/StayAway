@@ -1,7 +1,21 @@
 import style from "./styles/login.module.css";
 import { BiShow } from "react-icons/bi";
+import { BiHide } from "react-icons/bi";
 import Logo from "../../assets/no-background-logo.png";
-function Login() {
+import { RootState } from "../../redux/store";
+import { useState } from "react";
+import { togglePasswordVisibility } from "../../redux/slices/loginSlice";
+import { useAppDispatch, useAppSelector } from "../../hooks/ReduxHooks";
+const Login: React.FC = () => {
+  const dispatch = useAppDispatch();
+  const passwordVisible = useAppSelector(
+    (state) => state.login.passwordVisible
+  );
+  const [password, setPassword] = useState<string>("");
+  const handleTogglePasswordVisibility = () => {
+    dispatch(togglePasswordVisibility());
+  };
+
   return (
     <main className={style["login-container"]}>
       <div className={style["login-form"]}>
@@ -23,15 +37,27 @@ function Login() {
           <div className={style["password-container"]}>
             <input
               className={style["password"]}
-              type="password"
+              type={passwordVisible ? "text" : "password"}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               id="password"
               placeholder="Password"
             />
-            <BiShow
-              className={style["show-hide"]}
-              size={25}
-              style={{ cursor: "pointer" }}
-            />
+            {passwordVisible ? (
+              <BiShow
+                className={style["show-hide"]}
+                onClick={handleTogglePasswordVisibility}
+                size={25}
+                style={{ cursor: "pointer" }}
+              />
+            ) : (
+              <BiHide
+                className={style["show-hide"]}
+                onClick={handleTogglePasswordVisibility}
+                size={25}
+                style={{ cursor: "pointer" }}
+              />
+            )}
           </div>
         </div>
         <button className={style["login-btn"]}>Login</button>
@@ -49,6 +75,6 @@ function Login() {
       </div>
     </main>
   );
-}
+};
 
 export default Login;
