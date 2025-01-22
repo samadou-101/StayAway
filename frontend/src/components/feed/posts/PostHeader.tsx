@@ -1,16 +1,25 @@
 import style from "../styles/post.module.css";
 import profile_pic from "../../../assets/logo.png";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-function PostHeader() {
+interface PostHeaderProps {
+  profileName: string;
+  profileMiniBio: string;
+  profilePictureUrl: string;
+}
+const PostHeader: React.FC<PostHeaderProps> = ({
+  profileName,
+  profileMiniBio,
+  profilePictureUrl,
+}) => {
   return (
     <div className={style["postheader-container"]}>
       <div className={style["profile-container"]}>
         <div className={style["profilepic"]}>
-          <img src={profile_pic} alt="profile pic" />
+          <img src={profilePictureUrl} alt="profile pic" />
         </div>
         <div className={style["profile-data"]}>
-          <strong>StayAway</strong>
-          <span>Minimalist Social Media App</span>
+          <strong>{profileName}</strong>
+          <span>{profileMiniBio}</span>
         </div>
       </div>
 
@@ -22,6 +31,6 @@ function PostHeader() {
       </div>
     </div>
   );
-}
+};
 
 export default PostHeader;

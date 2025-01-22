@@ -1,6 +1,6 @@
 import style from "./styles/stats.module.css";
 import ShareIcon from "@mui/icons-material/Share";
-function Share() {
+const Share: React.FC<{ shares: number }> = ({ shares }) => {
   return (
     <div className={style["share-container"]}>
       <ShareIcon
@@ -10,9 +10,9 @@ function Share() {
           "&:hover": { color: "black" },
         }}
       />
-      <span>10 Share</span>
+      <span>{shares}</span>
     </div>
   );
-}
+};
 
 export default Share;

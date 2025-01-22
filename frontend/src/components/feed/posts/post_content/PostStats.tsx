@@ -3,12 +3,17 @@ import Comments from "../stats_components/Comments";
 import Like from "../stats_components/Like";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import style from "./styles/content.module.css";
-function PostStats() {
+interface PostStatsProps {
+  likes: number;
+  comments: string;
+  shares: number;
+}
+const PostStats: React.FC<PostStatsProps> = ({ likes, comments, shares }) => {
   return (
     <div className={style["poststats-container"]}>
-      <Like />
-      <Comments />
-      <Share />
+      <Like likes={likes} />
+      <Comments comments={comments} />
+      <Share shares={shares} />
       <BookmarkBorderIcon
         color="action"
         sx={{
@@ -19,6 +24,6 @@ function PostStats() {
       />
     </div>
   );
-}
+};
 
 export default PostStats;

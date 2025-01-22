@@ -1,12 +1,44 @@
 import style from "../styles/post.module.css";
 import PostContent from "./post_content/PostContent.tsx";
+import PostStats from "./post_content/PostStats.tsx";
 import PostHeader from "./PostHeader";
 import PostInteractions from "./PostInteractions";
-const Post: React.FC = () => {
+
+interface PostProps {
+  // Post Header
+  profileName: string;
+  profileMiniBio: string;
+  profilePictureUrl: string;
+  // Post Content
+  pContent: string;
+  // Post Interactions
+  likes: number;
+  comments: string;
+  shares: number;
+}
+
+const Post: React.FC<PostProps> = ({
+  profileName,
+  profileMiniBio,
+  profilePictureUrl,
+  pContent,
+  likes,
+  comments,
+  shares,
+}) => {
   return (
     <div className={style["post-container"]}>
-      <PostHeader />
-      <PostContent />
+      <PostHeader
+        profileName={profileName}
+        profileMiniBio={profileMiniBio}
+        profilePictureUrl={profilePictureUrl}
+      />
+      <PostContent
+        pContent={pContent}
+        likes={likes}
+        comments={comments}
+        shares={shares}
+      />
       <PostInteractions />
     </div>
   );

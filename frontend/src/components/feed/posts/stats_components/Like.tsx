@@ -1,6 +1,6 @@
 import style from "./styles/stats.module.css";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
-function Like() {
+const Like: React.FC<{ likes: number }> = ({ likes }) => {
   return (
     <div className={style["like-container"]}>
       <ThumbUpOffAltIcon
@@ -10,9 +10,9 @@ function Like() {
           "&:hover": { color: "black" },
         }}
       />
-      <span>10 Likes</span>
+      <span>{likes}</span>
     </div>
   );
-}
+};
 
 export default Like;

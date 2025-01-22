@@ -1,6 +1,6 @@
 import style from "./styles/stats.module.css";
 import SmsOutlinedIcon from "@mui/icons-material/SmsOutlined";
-function Comments() {
+const Comments: React.FC<{ comments: string }> = ({ comments }) => {
   return (
     <div className={style["comments-container"]}>
       <SmsOutlinedIcon
@@ -10,9 +10,9 @@ function Comments() {
           "&:hover": { color: "black" },
         }}
       />
-      <span>10 Comments</span>
+      <span>{comments}</span>
     </div>
   );
-}
+};
 
 export default Comments;
