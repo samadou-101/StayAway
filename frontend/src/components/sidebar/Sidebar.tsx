@@ -11,8 +11,8 @@ function Sidebar() {
       <div className={style["side-content"]}>
         <Search />
         <Nav />
+        <ProfileLogout />
       </div>
-      <ProfileLogout />
     </div>
   );
 }

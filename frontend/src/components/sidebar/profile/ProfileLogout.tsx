@@ -6,14 +6,17 @@ function ProfileLogout() {
     <div
       className="contaienr"
       style={{
+        // position: "fixed",
+        // left: "0",
+        // bottom: "0",
         display: "flex",
         alignItems: "center",
         gap: "0.5rem",
         width: "17.5rem",
         height: "4.3rem",
         paddingRight: "1rem",
-        paddingLeft: "1.75rem",
-        marginTop: "auto",
+        // paddingLeft: "1.75rem",
+        marginTop: "100%",
       }}
     >
       <div

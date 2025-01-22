@@ -1,8 +1,13 @@
 .messages-container {
   width: 100%;
   /* height: 100%; */
-  height: 89%;
-  padding: 2rem 3.5rem;
+  /* height: 89%; */
+  padding: 5.3rem 3.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(204, 218, 226);
 }
 .messages-content {
   width: 100%;

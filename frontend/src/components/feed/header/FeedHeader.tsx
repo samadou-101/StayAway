@@ -4,8 +4,8 @@ import SearchBar from "./SearchBar";
 function FeedHeader() {
   return (
     <div className={style["header-container"]}>
-      {/* <SearchBar /> */}
-      {/* <NewPost /> */}
+      <SearchBar />
+      <NewPost />
     </div>
   );
 }
