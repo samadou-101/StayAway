@@ -6,6 +6,8 @@ import { RootState } from "../../redux/store";
 import { useState } from "react";
 import { togglePasswordVisibility } from "../../redux/slices/loginSlice";
 import { useAppDispatch, useAppSelector } from "../../hooks/ReduxHooks";
+import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 const Login: React.FC = () => {
   const dispatch = useAppDispatch();
   const passwordVisible = useAppSelector(
@@ -43,21 +45,22 @@ const Login: React.FC = () => {
               id="password"
               placeholder="Password"
             />
-            {passwordVisible ? (
-              <BiShow
-                className={style["show-hide"]}
-                onClick={handleTogglePasswordVisibility}
-                size={25}
-                style={{ cursor: "pointer" }}
-              />
-            ) : (
-              <BiHide
-                className={style["show-hide"]}
-                onClick={handleTogglePasswordVisibility}
-                size={25}
-                style={{ cursor: "pointer" }}
-              />
-            )}
+            {password !== "" &&
+              (passwordVisible ? (
+                <BiShow
+                  className={style["show-hide"]}
+                  onClick={handleTogglePasswordVisibility}
+                  size={25}
+                  style={{ cursor: "pointer" }}
+                />
+              ) : (
+                <BiHide
+                  className={style["show-hide"]}
+                  onClick={handleTogglePasswordVisibility}
+                  size={25}
+                  style={{ cursor: "pointer" }}
+                />
+              ))}
           </div>
         </div>
         <button className={style["login-btn"]}>Login</button>
@@ -70,7 +73,7 @@ const Login: React.FC = () => {
           <span>Log in with Google</span>
         </div>
         <p className={style["no-account"]}>
-          You don't have an account? <a href="">signup</a>
+          You don't have an account? <Link to={"/signup"}>signup </Link>
         </p>
       </div>
     </main>

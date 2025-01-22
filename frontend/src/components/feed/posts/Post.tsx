@@ -2,7 +2,7 @@ import style from "../styles/post.module.css";
 import PostContent from "./post_content/PostContent.tsx";
 import PostHeader from "./PostHeader";
 import PostInteractions from "./PostInteractions";
-function Post() {
+const Post: React.FC = () => {
   return (
     <div className={style["post-container"]}>
       <PostHeader />
@@ -10,6 +10,6 @@ function Post() {
       <PostInteractions />
     </div>
   );
-}
+};
 
 export default Post;

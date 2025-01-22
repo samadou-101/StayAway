@@ -1,8 +1,22 @@
 import style from "./styles/signup.module.css";
 import Logo from "../../assets/no-background-logo.png";
-import { BiShow } from "react-icons/bi";
+import { BiHide, BiShow } from "react-icons/bi";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useAppDispatch, useAppSelector } from "../../hooks/ReduxHooks";
+import { togglePasswordVisibility } from "../../redux/slices/signupSlice";
 
 function SignupForm() {
+  const [password, setPassword] = useState<string>("");
+
+  const passwordVisible = useAppSelector(
+    (state) => state.signup.passwordVisible
+  );
+  const dispatch = useAppDispatch();
+  const handleTogglePasswordVisibility = () => {
+    dispatch(togglePasswordVisibility());
+  };
+
   return (
     <main className={style["signup-container"]}>
       <div className={style["signup-form"]}>
@@ -33,15 +47,28 @@ function SignupForm() {
           <div className={style["password-container"]}>
             <input
               className={style["password"]}
-              type="password"
+              type={passwordVisible ? "text" : "password"}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               id="password"
               placeholder="Password"
             />
-            <BiShow
-              className={style["show-hide"]}
-              size={25}
-              style={{ cursor: "pointer" }}
-            />
+            {password !== "" &&
+              (passwordVisible ? (
+                <BiShow
+                  className={style["show-hide"]}
+                  onClick={handleTogglePasswordVisibility}
+                  size={25}
+                  style={{ cursor: "pointer" }}
+                />
+              ) : (
+                <BiHide
+                  className={style["show-hide"]}
+                  onClick={handleTogglePasswordVisibility}
+                  size={25}
+                  style={{ cursor: "pointer" }}
+                />
+              ))}
           </div>
         </div>
         <button className={style["signup-btn"]}>Signup</button>
@@ -54,7 +81,7 @@ function SignupForm() {
           <span>Signup with Google</span>
         </div>
         <p className={style["no-account"]}>
-          You don't have an account? <a href="">signup</a>
+          You don't have an account? <Link to={"/login"}>login</Link>
         </p>
       </div>
     </main>

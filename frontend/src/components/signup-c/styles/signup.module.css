@@ -77,13 +77,13 @@
   padding-right: 0.2rem;
   border-radius: 7px;
 }
-.password-container .show-hide {
+/* .password-container .show-hide {
   color: gray;
   transition: all 0.2s ease-in;
 }
 .password-container .show-hide:hover {
   color: black;
-}
+} */
 .or {
   width: fit-content;
   position: relative;
