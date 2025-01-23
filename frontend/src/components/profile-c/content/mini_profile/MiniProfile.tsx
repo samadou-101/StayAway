@@ -7,21 +7,31 @@ import GroupAddOutlinedIcon from "@mui/icons-material/GroupAddOutlined";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
 import { HiOutlineUsers } from "react-icons/hi2";
 import { PiNotePencilLight } from "react-icons/pi";
-function MiniProfile() {
+
+interface MiniProfileProps {
+  profileName: string;
+  profileMiniBio: string;
+  profilePictureUrl: string;
+}
+const MiniProfile: React.FC<MiniProfileProps> = ({
+  profileName,
+  profileMiniBio,
+  profilePictureUrl,
+}) => {
   return (
     <div className={style["mini-profile-container"]}>
       <div className={style1["mini-profile"]}>
         <div className={style1["main-info"]}>
           <div className={style1["pic-and-name"]}>
             <div className={style1["profile-pic"]}>
-              <img src={pic} alt="" />
+              <img src={profilePictureUrl} alt="" />
             </div>
             <div className={style1["user-intro"]}>
               <div className={style1["p-name"]}>
-                <span>Tiger</span>
+                <span>{profileName}</span>
               </div>
               <div className={style1["mini-bio"]}>
-                <span>A mini bio for the tiger shouldn't be long</span>
+                <span>{profileMiniBio}</span>
               </div>
             </div>
           </div>
@@ -77,6 +87,6 @@ function MiniProfile() {
       </div>
     </div>
   );
-}
+};
 
 export default MiniProfile;

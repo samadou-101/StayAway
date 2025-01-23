@@ -5,11 +5,13 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import ChatBubbleOutlineTwoToneIcon from "@mui/icons-material/ChatBubbleOutlineTwoTone";
 import Logo from "../../../assets/no-background-logo.png";
 import Search from "../../sidebar/header/Search";
+import { useNavigate } from "react-router";
 function ProfileHeader() {
+  const navigate = useNavigate();
   return (
     <div className={style["profile-header"]}>
       <div className={style["logo-search"]}>
-        <div className={style["pheader-logo"]}>
+        <div className={style["pheader-logo"]} onClick={() => navigate("/")}>
           <img src={Logo} alt="" />
         </div>
         <Search />
