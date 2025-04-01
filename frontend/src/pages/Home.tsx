@@ -1,14 +1,12 @@
-import { useEffect } from "react";
 import Feed from "../components/feed/Feed";
 import Sidebar from "../components/sidebar/Sidebar";
 import Dashboard from "../components/dashboard/Dashboard";
 import Messages from "../components/chat-c/Messages";
-import { Route, Routes } from "react-router-dom";
 import { useAppSelector } from "../hooks/ReduxHooks";
 
 function Home() {
   const isFeedVisible = useAppSelector(
-    (state) => state.toggleChatOrFeed.feedVisible
+    (state) => state.toggleChatOrFeed.feedVisible,
   );
   return (
     <>

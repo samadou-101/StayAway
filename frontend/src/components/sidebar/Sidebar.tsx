@@ -1,14 +1,13 @@
-import React from "react";
 import Logo from "./header/Logo.tsx";
 import Search from "./header/Search.tsx";
 import Nav from "./nav/Nav";
-import style from "./styles/sidebar.module.css";
 import ProfileLogout from "./profile/ProfileLogout";
+
 function Sidebar() {
   return (
-    <div className={style["sidebar-container"]}>
+    <div className="fixed top-0 left-0 h-screen w-[19.5rem] border-r border-gray-500">
       <Logo />
-      <div className={style["side-content"]}>
+      <div className="flex flex-col p-4 pt-7">
         <Search />
         <Nav />
         <ProfileLogout />
