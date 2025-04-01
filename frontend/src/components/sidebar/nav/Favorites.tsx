@@ -1,4 +1,3 @@
-import React from "react";
 import BookmarkAddOutlinedIcon from "@mui/icons-material/BookmarkAddOutlined";
 function Favorites() {
   return (

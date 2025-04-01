@@ -1,4 +1,3 @@
-import React from "react";
 import GroupOutlinedIcon from "@mui/icons-material/GroupOutlined";
 function Friends() {
   return (

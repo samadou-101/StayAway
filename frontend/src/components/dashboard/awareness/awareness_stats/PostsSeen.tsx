@@ -1,4 +1,3 @@
-import React from "react";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 
 function PostsSeen() {
