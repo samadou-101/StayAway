@@ -12,16 +12,9 @@ function Home() {
     <>
       <Sidebar />
       <div
-        className="home-page-container"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          paddingLeft: "19.5rem ",
-          // paddingRight: "19.5rem",
-          paddingRight: isFeedVisible ? "19.5rem" : "20.1rem",
-          height: "100%",
-        }}
+        className={`flex flex-col items-center pl-[19.5rem] ${
+          isFeedVisible ? "pr-[19.5rem]" : "pr-[20.1rem]"
+        } h-full`}
       >
         {isFeedVisible ? <Feed /> : <Messages />}
       </div>
