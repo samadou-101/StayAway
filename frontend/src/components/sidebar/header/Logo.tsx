@@ -1,13 +1,12 @@
-import React from "react";
 import logo from "../../../assets/no-background-logo.png";
-import style from "../styles/logo.module.css";
+
 function Logo() {
   return (
-    <div className={style["logo-container"]}>
-      <div className={style["logo-border"]}>
-        <img className={style["logo-img"]} src={logo} alt="" />
+    <div className="flex h-16 w-full items-center justify-center gap-2.5 border-b border-gray-500">
+      <div className="h-12 w-12 overflow-hidden rounded-full">
+        <img className="w-full object-cover" src={logo} alt="Logo" />
       </div>
-      <span className={style["logo-name"]}>StayAway</span>
+      <span className="text-3xl font-bold">StayAway</span>
     </div>
   );
 }
