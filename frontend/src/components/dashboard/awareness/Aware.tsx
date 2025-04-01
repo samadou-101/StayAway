@@ -1,14 +1,14 @@
-import style from "../styles/awareness.module.css";
 import QueryStatsOutlinedIcon from "@mui/icons-material/QueryStatsOutlined";
 import AwareStats from "./awareness_stats/AwareStats";
+
 function Aware() {
   return (
-    <div className={style["aware-container"]}>
-      <div className={style["awr-header"]}>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <span className={style["spn1"]}>Awareness</span>
+    <div className="flex w-full flex-col">
+      <div className="m-4 flex items-center justify-between border-b border-gray-500 pb-4">
+        <div className="flex items-center">
+          <span className="text-lg font-semibold">Awareness</span>
         </div>
-        <div className={style["awr-details"]}>
+        <div className="flex h-8 items-center gap-2">
           <QueryStatsOutlinedIcon
             sx={{
               color: "#38b000",

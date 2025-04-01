@@ -1,18 +1,21 @@
-import style from "../../styles/awareness.module.css";
 import VideocamOutlinedIcon from "@mui/icons-material/VideocamOutlined";
+
 function VideosWatched() {
   return (
-    <div className={style["videos-watched-container"]}>
-      <div className={style["videos-watched-title"]}>
+    // <div className="mt-4 flex w-full flex-col items-center gap-6">
+    <div className="flex w-[17.5rem] items-center rounded-md border border-gray-300 p-6">
+      <div className="flex items-center gap-2.5">
         <VideocamOutlinedIcon
           sx={{
             color: "purple",
           }}
         />
-        <span>Videos Watched</span>
+        <span className="text-[15px] font-medium">Videos Watched</span>
       </div>
-      {/* <span style={{ marginLeft: "auto" }}>15</span> */}
+      {/* Uncomment and convert the inline style to Tailwind if needed */}
+      {/* <span className="ml-auto">15</span> */}
     </div>
+    // </div>
   );
 }
 
