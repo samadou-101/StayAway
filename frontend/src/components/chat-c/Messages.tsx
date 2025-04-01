@@ -41,7 +41,7 @@ function Messages() {
           </div>
 
           {/* Chat content area - made scrollable */}
-          <div className="flex h-[calc(100%-7rem)] flex-col justify-between">
+          <div className="flex h-[calc(100%-7rem)] grow flex-col justify-between">
             {/* Chat messages - made scrollable */}
             <div className="flex-grow overflow-y-auto p-4">
               <ActualChat />
