@@ -1,8 +1,8 @@
-import style from "./styles/stats.module.css";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
+
 const Like: React.FC<{ likes: number }> = ({ likes }) => {
   return (
-    <div className={style["like-container"]}>
+    <div className="flex w-fit items-center justify-between gap-[0.06rem]">
       <ThumbUpOffAltIcon
         color="action"
         sx={{
@@ -10,7 +10,7 @@ const Like: React.FC<{ likes: number }> = ({ likes }) => {
           "&:hover": { color: "black" },
         }}
       />
-      <span>{likes}</span>
+      <span className="ml-[0.2rem] text-sm">{likes}</span>
     </div>
   );
 };

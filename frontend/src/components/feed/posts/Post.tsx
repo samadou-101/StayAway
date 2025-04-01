@@ -1,4 +1,3 @@
-import style from "../styles/post.module.css";
 import PostContent from "./post_content/PostContent.tsx";
 import PostHeader from "./PostHeader";
 import PostInteractions from "./PostInteractions";
@@ -28,7 +27,7 @@ const Post: React.FC<PostProps> = ({
   shares,
 }) => {
   return (
-    <div className={style["post-container"]}>
+    <div className="mx-auto my-4 w-[55%] overflow-hidden rounded-xl border border-gray-300 bg-white shadow-[2px_3px_5px_1px_rgba(0,0,0,0.1)]">
       <PostHeader
         profileName={profileName}
         profileID={profileID}

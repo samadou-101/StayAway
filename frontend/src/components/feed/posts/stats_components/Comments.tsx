@@ -1,8 +1,8 @@
-import style from "./styles/stats.module.css";
 import SmsOutlinedIcon from "@mui/icons-material/SmsOutlined";
+
 const Comments: React.FC<{ comments: string }> = ({ comments }) => {
   return (
-    <div className={style["comments-container"]}>
+    <div className="flex w-fit items-center justify-between gap-[0.09rem]">
       <SmsOutlinedIcon
         color="action"
         sx={{
@@ -10,7 +10,7 @@ const Comments: React.FC<{ comments: string }> = ({ comments }) => {
           "&:hover": { color: "black" },
         }}
       />
-      <span>{comments}</span>
+      <span className="ml-[0.2rem] text-sm">{comments}</span>
     </div>
   );
 };

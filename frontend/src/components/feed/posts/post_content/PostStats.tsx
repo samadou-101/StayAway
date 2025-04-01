@@ -2,15 +2,16 @@ import Share from "../stats_components/Share";
 import Comments from "../stats_components/Comments";
 import Like from "../stats_components/Like";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
-import style from "./styles/content.module.css";
+
 interface PostStatsProps {
   likes: number;
   comments: string;
   shares: number;
 }
+
 const PostStats: React.FC<PostStatsProps> = ({ likes, comments, shares }) => {
   return (
-    <div className={style["poststats-container"]}>
+    <div className="mb-4 flex h-[1.5rem] w-full items-center gap-6 px-4">
       <Like likes={likes} />
       <Comments comments={comments} />
       <Share shares={shares} />
