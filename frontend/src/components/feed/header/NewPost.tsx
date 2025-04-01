@@ -1,9 +1,11 @@
-import style from "../styles/header.module.css";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
+
 function NewPost() {
   return (
-    <div className={style["newpost-container"]}>
-      <span className={style["add-post"]}>Add New Post</span>
+    <div className="flex h-8 w-[11.2rem] cursor-pointer items-center gap-4 rounded-full bg-indigo-600 pl-4">
+      <span className="font-medium text-white transition-all duration-200 ease-in-out">
+        Add New Post
+      </span>
       <AddOutlinedIcon
         sx={{
           color: "white",

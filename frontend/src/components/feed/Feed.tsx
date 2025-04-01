@@ -1,9 +1,7 @@
-import React from "react";
 import FeedHeader from "./header/FeedHeader";
 import StoriesSection from "./stories/StoriesSection";
-import style from "./styles/feed.module.css";
 import Post from "./posts/Post";
-import Messages from "../chat-c/Messages";
+
 function Feed() {
   const examplePost = {
     profileName: "John Doe",
@@ -17,10 +15,11 @@ function Feed() {
     comments: "Great post! Very informative.",
     shares: 45,
   };
+
   return (
-    <div className={style["feed-container"]}>
+    <div className="flex w-full flex-col">
       <FeedHeader />
-      <div className={style["content-container"]}>
+      <div className="flex w-full flex-col bg-slate-100 pt-6">
         <StoriesSection />
         <Post {...examplePost} />
         <Post

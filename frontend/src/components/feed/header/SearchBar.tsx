@@ -1,12 +1,12 @@
 import SearchIcon from "@mui/icons-material/Search";
-import style from "../styles/header.module.css";
+
 function SearchBar() {
   return (
-    <div className={style["searchbar-container"]}>
+    <div className="flex h-8 w-[25rem] items-center justify-start rounded-xl border border-gray-300 px-4">
       <input
         type="text"
         placeholder="Search for friends, pages, groups"
-        style={{ outline: "none", border: "none", width: "75%" }}
+        className="w-3/4 border-none outline-none"
       />
       <SearchIcon
         color="action"
