@@ -6,9 +6,19 @@ import { RootState } from "../../redux/store";
 import { useState } from "react";
 import { togglePasswordVisibility } from "../../redux/slices/loginSlice";
 import { useAppDispatch, useAppSelector } from "../../hooks/ReduxHooks";
-import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+
 const Login: React.FC = () => {
+  interface Inputs {
+    email: string;
+    password: string;
+  }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Inputs>();
   const dispatch = useAppDispatch();
   const passwordVisible = useAppSelector(
     (state) => state.login.passwordVisible
@@ -30,6 +40,7 @@ const Login: React.FC = () => {
           <div className={style["email-container"]}>
             <input
               className={style["email"]}
+              {...register("email", { required: "Email required!" })}
               id="email"
               type="text"
               placeholder="Email"
